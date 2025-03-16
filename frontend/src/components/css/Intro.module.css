@@ -1,0 +1,91 @@
+#main{
+    margin:0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#mainBox{
+    display: flex;
+    margin-top: 10%;
+    /* border: 1px solid red; */
+    padding: 10px 10px;
+    height: 500px;
+    flex-direction: row;
+}
+#smallBox1{
+    width: 50%;
+    display: flex;
+    /* border: 1px solid red; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#title {
+    font-size: 130px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "Marcellus", serif;
+    font-weight: bolder;
+    margin: 0;
+    color: transparent;
+    background: -webkit-linear-gradient(160deg, #b78ebd, #52003d, #b78ebd);
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: anime1 3s infinite alternate;
+}
+
+@keyframes anime1 {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+#smallBox{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    /* border: 1px solid green; */
+    flex-direction: column;
+}
+#subTitle{
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: white; */
+    color: transparent;
+    margin: 0;
+    background-clip: text;
+    background:  -webkit-linear-gradient(160deg, #473849 0%, #38002a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#desc{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: white; */
+    color: transparent;
+    background-clip: text;
+    background:  -webkit-linear-gradient(160deg, #b78ebd 0%, #52003d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#next{
+    background:transparent;
+    height: 50px;
+    border: 5px solid white;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    transition-duration: 0.3s;
+    width: 150px;
+}
+
+#next:hover{
+    width: 200px;
+    border: 5px solid rgb(88, 55, 92);
+    letter-spacing: 9px;
+    color: rgb(88, 55, 92);
+}
