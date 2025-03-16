@@ -1,5 +1,8 @@
 body{
     background-image:url("../images/img3.jpg");
+}
+*{
     margin: 0 0;
     padding: 0 0;
+    box-sizing: border-box;
 }

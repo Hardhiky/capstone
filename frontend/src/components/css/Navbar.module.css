@@ -1,0 +1,40 @@
+#navbar {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    position: fixed;
+    top: 0%;
+}
+
+#navBar {
+    display: flexbox;
+    justify-content: flex-end;
+    width: 100%;
+    flex-direction: row;
+}
+
+a {
+    text-decoration: none;
+    width: 20%;
+    color: rgb(0, 0, 0);
+}
+
+#title {
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 4px;
+    color: rgb(192, 192, 192);
+    font-size: 25px;
+}
+
+#navui {
+    border: 1px solid black;
+    float: right;
+    display: flexbox;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+}
+
+#navItem{
+font-size: 20px;}
