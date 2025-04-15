@@ -1,0 +1,82 @@
+body {
+    margin: 0px;
+}
+
+#questionMainBox {
+    margin-top: 5%;
+    width: 60%;
+    margin-left: 1%;
+    color: aliceblue;
+    border-radius: 6px;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    justify-content: start;
+    background-color: rgb(24, 24, 24);
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+
+#question {
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 25px;
+}
+
+#answerBox {
+    padding: 5px;
+    text-align: justify;
+    padding: 5px 15px;
+    border-radius: 6px;
+    font-size: 25px;
+    width: 90%;
+    background-color: rgb(37, 37, 37);
+    margin-bottom: 30px;
+}
+
+#microphoneLogo {
+    font-size: 35px;
+    padding: 7px;
+    transition-duration: 0.3s;
+}
+
+#microphoneLogo:hover {
+    color: black;
+    background-color: white;
+    border-radius: 100px;
+}
+
+#answer {
+    background: transparent;
+    width: 100%;
+    border: none;
+    height: 200px;
+    color: white;
+}
+
+#answer:focus {
+    outline: none;
+}
+
+#submitAnswerButton {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px 0 50px 0;
+    padding: 5px 10px;
+    transition-duration: 0.3s;
+    border: 2px solid white;
+}
+
+#submitAnswerButton:hover {
+    background-color: white;
+    padding: 5px 30px;
+    color: black;
+}
+
+#aiAnswerLabel {
+    font-weight: bolder;
+    font-style: italic;
+}
