@@ -1,0 +1,202 @@
+[
+  {
+    "technology": "Python",
+    "question": "What is the difference between a list and a tuple in Python?",
+    "answer": "Lists are mutable (can be modified after creation) while tuples are immutable (cannot be modified after creation). Lists use square brackets [] while tuples use parentheses (). Lists are generally used for collections of similar items, while tuples are often used for heterogeneous data. Lists have more built-in methods than tuples."
+  },
+  {
+    "technology": "Python",
+    "question": "Explain Python's GIL (Global Interpreter Lock)",
+    "answer": "The Global Interpreter Lock (GIL) is a mutex that protects access to Python objects in CPython. It prevents multiple native threads from executing Python bytecodes at once. This means that even in a multi-threaded Python program, only one thread can execute Python code at a time. The GIL exists because Python's memory management is not thread-safe. While it simplifies memory management, it can be a bottleneck for CPU-bound tasks. For CPU-bound tasks, multiprocessing is recommended over threading."
+  },
+  {
+    "technology": "Python",
+    "question": "What are Python decorators and how do they work?",
+    "answer": "Decorators are functions that modify the behavior of other functions. They use the @decorator syntax and are a form of metaprogramming. Decorators can be used for logging, access control, caching, and more. They work by taking a function as input and returning a new function that usually wraps the original function with additional functionality. Decorators can be stacked and can accept arguments."
+  },
+  {
+    "technology": "Python",
+    "question": "Explain Python's memory management",
+    "answer": "Python uses reference counting and garbage collection for memory management. Reference counting tracks the number of references to each object and deallocates objects when their reference count reaches zero. The garbage collector handles circular references by periodically detecting and collecting objects that are no longer accessible. Python also uses memory pools for small objects to reduce memory fragmentation."
+  },
+  {
+    "technology": "Python",
+    "question": "What are Python generators and how do they work?",
+    "answer": "Generators are functions that return an iterator using yield. They generate values on-the-fly instead of storing all values in memory at once. This makes them memory efficient for large datasets. When a generator function is called, it returns a generator object that can be iterated over. Each time next() is called on the generator, it executes until it hits a yield statement, returns the value, and pauses execution."
+  },
+  {
+    "technology": "Python",
+    "question": "Explain Python's context managers",
+    "answer": "Context managers are objects that implement __enter__ and __exit__ methods, used with the 'with' statement. They ensure proper resource management by automatically handling setup and cleanup operations. Common uses include file handling, database connections, and thread locks. The 'with' statement ensures that resources are properly released even if an exception occurs."
+  },
+  {
+    "technology": "Python",
+    "question": "What is the difference between shallow copy and deep copy?",
+    "answer": "A shallow copy creates a new object but references the same memory addresses for nested objects. A deep copy creates a completely independent copy of an object and all its nested objects. Use copy.copy() for shallow copy and copy.deepcopy() for deep copy. Shallow copies are faster but may lead to unexpected behavior with nested mutable objects."
+  },
+  {
+    "technology": "Python",
+    "question": "How does Python handle multiple inheritance?",
+    "answer": "Python supports multiple inheritance through the Method Resolution Order (MRO). When a method is called, Python searches for it in the class itself, then in its parent classes (following the order defined in the class definition), and finally in the parent classes of parent classes. The MRO can be viewed using the __mro__ attribute. Python uses C3 linearization to determine the order."
+  },
+  {
+    "technology": "Python",
+    "question": "What are Python's magic methods?",
+    "answer": "Magic methods (also called dunder methods) are special methods in Python that start and end with double underscores. They allow classes to define how they behave with built-in Python operations. Common examples include __init__ (constructor), __str__ (string representation), __len__ (length), __add__ (addition), __getitem__ (indexing), and __call__ (making objects callable)."
+  },
+  {
+    "technology": "Python",
+    "question": "Explain Python's property decorator",
+    "answer": "The @property decorator is used to define methods that can be accessed like attributes. It allows you to add getters, setters, and deleters to class attributes while maintaining a clean interface. Properties can be used to validate data, compute values on-the-fly, or maintain backward compatibility. They help implement the principle of encapsulation in Python."
+  },
+  {
+    "technology": "Node.js",
+    "question": "What is the event loop in Node.js?",
+    "answer": "The event loop is a mechanism that allows Node.js to perform non-blocking I/O operations despite JavaScript being single-threaded. It works by continuously checking the event queue for pending events and executing their associated callbacks. The event loop processes events in phases: timers, pending callbacks, idle/prepare, poll, check, and close callbacks. This enables Node.js to handle many concurrent connections efficiently."
+  },
+  {
+    "technology": "Node.js",
+    "question": "Explain Node.js streams",
+    "answer": "Streams are objects that let you read data from a source or write data to a destination continuously. There are four types of streams: Readable, Writable, Duplex, and Transform. Streams are memory efficient as they process data in chunks rather than loading entire datasets into memory. They're commonly used for handling large files, real-time data processing, and network operations."
+  },
+  {
+    "technology": "Node.js",
+    "question": "What is the difference between process.nextTick() and setImmediate()?",
+    "answer": "process.nextTick() adds callbacks to the next iteration of the event loop, while setImmediate() adds callbacks to the end of the current event loop iteration. process.nextTick() has higher priority and will always execute before setImmediate(). This can lead to potential starvation if process.nextTick() is called recursively."
+  },
+  {
+    "technology": "Node.js",
+    "question": "How does error handling work in Node.js?",
+    "answer": "Node.js uses a combination of try-catch blocks, error events, and error-first callbacks for error handling. The 'error' event is emitted when an error occurs in an EventEmitter. Error-first callbacks receive an error as their first parameter. Uncaught exceptions can be handled using process.on('uncaughtException'). It's important to properly handle errors to prevent application crashes."
+  },
+  {
+    "technology": "Node.js",
+    "question": "Explain Node.js clustering",
+    "answer": "Clustering in Node.js allows you to create child processes (workers) that share server ports. The cluster module enables you to create a pool of child processes to handle incoming requests. This improves performance on multi-core systems by utilizing all available CPU cores. The master process distributes incoming connections among the workers using a round-robin algorithm."
+  },
+  {
+    "technology": "Node.js",
+    "question": "What are Node.js buffers?",
+    "answer": "Buffers are objects that represent fixed-sized chunks of memory. They're used to handle binary data directly, which is essential for working with files, network protocols, and other I/O operations. Buffers are instances of the Buffer class and can be created using various methods like Buffer.from(), Buffer.alloc(), and Buffer.allocUnsafe()."
+  },
+  {
+    "technology": "Node.js",
+    "question": "How does Node.js handle asynchronous operations?",
+    "answer": "Node.js handles asynchronous operations through callbacks, Promises, and async/await. Callbacks are functions passed as arguments to other functions and executed after the main function has finished execution. Promises provide a cleaner way to handle asynchronous operations with .then() and .catch() methods. async/await is syntactic sugar for Promises that makes asynchronous code look synchronous."
+  },
+  {
+    "technology": "Node.js",
+    "question": "What is the difference between require() and import?",
+    "answer": "require() is a CommonJS module system function that loads modules synchronously, while import is an ES6 module system feature that loads modules asynchronously. require() can be used anywhere in the code, while import must be at the top level. import provides better static analysis and tree-shaking capabilities. Node.js supports both systems, but ES modules are the future standard."
+  },
+  {
+    "technology": "Node.js",
+    "question": "Explain Node.js middleware",
+    "answer": "Middleware functions are functions that have access to the request object (req), response object (res), and next middleware function in the application's request-response cycle. They can execute any code, modify request and response objects, end the request-response cycle, and call the next middleware function. Common uses include logging, authentication, error handling, and parsing request bodies."
+  },
+  {
+    "technology": "Node.js",
+    "question": "What is the difference between process.env and process.argv?",
+    "answer": "process.env contains the user environment variables, while process.argv contains the command line arguments passed to the Node.js process. process.env is commonly used for configuration and secrets, while process.argv is used for command-line options and arguments. process.argv[0] is the path to the Node.js executable, and process.argv[1] is the path to the JavaScript file being executed."
+  },
+  {
+    "technology": "Java",
+    "question": "What is the difference between HashMap and HashTable?",
+    "answer": "HashMap is non-synchronized and permits null values/keys, while HashTable is synchronized and doesn't allow null values/keys. HashMap performs better in non-threaded applications, while HashTable is thread-safe but has lower performance. HashMap was introduced in Java 2, while HashTable is a legacy class. HashMap's iterator is fail-fast, while HashTable's enumerator is not fail-fast."
+  },
+  {
+    "technology": "Java",
+    "question": "Explain Java's garbage collection",
+    "answer": "Java's garbage collection automatically manages memory by identifying and removing objects that are no longer referenced. The JVM uses different garbage collection algorithms (like Mark-and-Sweep, Copying, Mark-and-Compact) and collectors (Serial, Parallel, CMS, G1). The garbage collector runs in a separate thread and can be tuned using various parameters. It helps prevent memory leaks but doesn't guarantee immediate memory reclamation."
+  },
+  {
+    "technology": "Java",
+    "question": "What is the difference between final, finally, and finalize?",
+    "answer": "final is a keyword used to make variables constant, prevent method overriding, and prevent inheritance. finally is a block used with try-catch to ensure code execution regardless of exception occurrence. finalize is a method called by the garbage collector before object collection. final is a modifier, finally is a block, and finalize is a method."
+  },
+  {
+    "technology": "Java",
+    "question": "Explain Java's thread lifecycle",
+    "answer": "Java threads go through various states: NEW (created but not started), RUNNABLE (ready to run or currently running), BLOCKED (waiting for monitor lock), WAITING (waiting indefinitely for another thread), TIMED_WAITING (waiting for a specified time), and TERMINATED (completed execution). Thread state transitions are managed by the JVM and can be monitored using Thread.getState()."
+  },
+  {
+    "technology": "Java",
+    "question": "What is the difference between wait() and sleep()?",
+    "answer": "wait() is a method of Object class that releases the lock on the object, while sleep() is a static method of Thread class that doesn't release the lock. wait() can be interrupted and must be called from a synchronized context, while sleep() can be called from any context. wait() is used for thread coordination, while sleep() is used for timing."
+  },
+  {
+    "technology": "Java",
+    "question": "Explain Java's exception hierarchy",
+    "answer": "Java's exception hierarchy starts with Throwable, which has two subclasses: Error and Exception. Error represents serious problems that shouldn't be caught (like OutOfMemoryError). Exception has two subclasses: RuntimeException (unchecked exceptions) and other exceptions (checked exceptions). Checked exceptions must be declared or caught, while unchecked exceptions don't require explicit handling."
+  },
+  {
+    "technology": "Java",
+    "question": "What is the difference between String, StringBuilder, and StringBuffer?",
+    "answer": "String is immutable and thread-safe, StringBuilder is mutable and non-thread-safe, and StringBuffer is mutable and thread-safe. String operations create new objects, while StringBuilder and StringBuffer modify the existing object. StringBuilder is faster than StringBuffer for single-threaded applications. String is best for constants, StringBuilder for single-threaded string manipulation, and StringBuffer for multi-threaded string manipulation."
+  },
+  {
+    "technology": "Java",
+    "question": "Explain Java's reflection API",
+    "answer": "Reflection allows programs to examine and modify their own structure and behavior at runtime. It provides capabilities to inspect classes, interfaces, fields, and methods; create new instances of classes; invoke methods; and get/set field values. Reflection is powerful but can impact performance and break encapsulation. It's commonly used in frameworks, testing tools, and development tools."
+  },
+  {
+    "technology": "Java",
+    "question": "What is the difference between Comparable and Comparator?",
+    "answer": "Comparable is an interface with a single compareTo() method for natural ordering, while Comparator is an interface with compare() method for custom ordering. Comparable is implemented by the class to be compared, while Comparator is implemented by a separate class. Comparable provides a single sorting sequence, while Comparator can provide multiple sorting sequences."
+  },
+  {
+    "technology": "Java",
+    "question": "Explain Java's memory model",
+    "answer": "Java's memory model defines how threads interact with memory, particularly with shared variables. It includes the heap (object storage), stack (method calls and local variables), and method area (class data). The model ensures memory consistency through happens-before relationships and volatile keyword. It helps prevent race conditions and ensures proper thread synchronization."
+  },
+  {
+    "technology": "React",
+    "question": "What is the Virtual DOM in React?",
+    "answer": "The Virtual DOM is a lightweight copy of the actual DOM. React uses it to improve performance by minimizing direct manipulation of the DOM. When state changes, React creates a new Virtual DOM tree, compares it with the previous one (diffing), and updates only the necessary parts of the actual DOM (reconciliation). This process is called reconciliation and makes React applications faster."
+  },
+  {
+    "technology": "React",
+    "question": "Explain React's component lifecycle",
+    "answer": "React components go through three main phases: mounting, updating, and unmounting. Mounting includes constructor(), static getDerivedStateFromProps(), render(), and componentDidMount(). Updating includes static getDerivedStateFromProps(), shouldComponentUpdate(), render(), getSnapshotBeforeUpdate(), and componentDidUpdate(). Unmounting includes componentWillUnmount(). These methods allow you to perform actions at specific points in a component's lifecycle."
+  },
+  {
+    "technology": "React",
+    "question": "What is the difference between state and props?",
+    "answer": "Props are read-only data passed from parent to child components, while state is mutable data managed within a component. Props are external and controlled by parent components, while state is internal and controlled by the component itself. Props are used for passing data down the component tree, while state is used for managing component-specific data that changes over time."
+  },
+  {
+    "technology": "React",
+    "question": "Explain React Hooks",
+    "answer": "Hooks are functions that allow you to use state and other React features in functional components. Common hooks include useState (for state management), useEffect (for side effects), useContext (for context), useReducer (for complex state), useCallback (for memoized callbacks), and useMemo (for memoized values). Hooks must be called at the top level of functional components."
+  },
+  {
+    "technology": "React",
+    "question": "What is the difference between controlled and uncontrolled components?",
+    "answer": "Controlled components have their value controlled by React state, while uncontrolled components maintain their own internal state. Controlled components use value and onChange props, while uncontrolled components use refs to access DOM values. Controlled components provide better control over form data, while uncontrolled components are simpler to implement."
+  },
+  {
+    "technology": "React",
+    "question": "Explain React's Context API",
+    "answer": "Context API provides a way to pass data through the component tree without prop drilling. It consists of React.createContext(), Provider component, and Consumer component (or useContext hook). Context is useful for global data like themes, user authentication, and language preferences. It should be used sparingly as it can make component reuse more difficult."
+  },
+  {
+    "technology": "React",
+    "question": "What is the difference between useCallback and useMemo?",
+    "answer": "useCallback memoizes functions, while useMemo memoizes values. useCallback is used when passing callbacks to optimized child components, while useMemo is used for expensive calculations. Both hooks take a dependency array to determine when to recompute. useCallback returns a memoized callback function, while useMemo returns a memoized value."
+  },
+  {
+    "technology": "React",
+    "question": "Explain React's reconciliation process",
+    "answer": "Reconciliation is the process through which React updates the DOM to match React elements. It involves comparing the new Virtual DOM tree with the previous one (diffing) and updating only the necessary parts of the actual DOM. React uses a 'key' prop to identify which items have changed, been added, or been removed. This process makes React applications efficient by minimizing DOM operations."
+  },
+  {
+    "technology": "React",
+    "question": "What is the difference between React.memo and useMemo?",
+    "answer": "React.memo is a higher-order component that memoizes the entire component, while useMemo is a hook that memoizes a value. React.memo prevents unnecessary re-renders of a component, while useMemo prevents unnecessary recalculations of a value. React.memo is used at the component level, while useMemo is used within a component."
+  },
+  {
+    "technology": "React",
+    "question": "Explain React's error boundaries",
+    "answer": "Error boundaries are React components that catch JavaScript errors anywhere in their child component tree and display a fallback UI. They catch errors during rendering, in lifecycle methods, and in constructors. Error boundaries don't catch errors in event handlers, asynchronous code, server-side rendering, or errors thrown in the error boundary itself."
+  }
+] 

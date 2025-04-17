@@ -1,0 +1,52 @@
+[
+  {
+    "technology": "Python",
+    "question": "What are decorators in Python?",
+    "answer": "Decorators are functions that modify the behavior of other functions. They are a form of metaprogramming and can be used to add functionality to existing functions without modifying their source code. Decorators use the @decorator syntax and are commonly used for logging, access control, caching, and more."
+  },
+  {
+    "technology": "Python",
+    "question": "How do you handle exceptions in Python?",
+    "answer": "Exceptions in Python are handled using try-except blocks. The try block contains code that might raise an exception, and the except block contains code to handle the exception. You can also use else and finally clauses. The else clause runs if no exception occurs, and finally always runs, typically used for cleanup."
+  },
+  {
+    "technology": "Python",
+    "question": "What is the difference between is and == in Python?",
+    "answer": "The == operator compares the values of two objects, while is compares their identities (memory addresses). == checks if two objects have the same value, while is checks if they are the same object in memory. For example, two lists with the same elements will be equal (==) but not identical (is)."
+  },
+  {
+    "technology": "Python",
+    "question": "How does garbage collection work in Python?",
+    "answer": "Python uses reference counting and a cyclic garbage collector. Reference counting tracks the number of references to each object and deallocates objects when their reference count reaches zero. The cyclic garbage collector handles circular references by periodically detecting and collecting objects that are no longer accessible."
+  },
+  {
+    "technology": "Python",
+    "question": "What are generators in Python?",
+    "answer": "Generators are functions that return an iterator using yield. They generate values on-the-fly instead of storing all values in memory at once. This makes them memory efficient for large datasets. Generators can be created using generator functions (with yield) or generator expressions (similar to list comprehensions but with parentheses)."
+  },
+  {
+    "technology": "Python",
+    "question": "How do you implement multithreading in Python?",
+    "answer": "Python's threading module is used for multithreading. However, due to the Global Interpreter Lock (GIL), Python threads are not true parallel threads for CPU-bound tasks. They are useful for I/O-bound tasks. The multiprocessing module is better for CPU-bound tasks as it uses separate processes."
+  },
+  {
+    "technology": "Python",
+    "question": "What is the difference between shallow copy and deep copy?",
+    "answer": "A shallow copy creates a new object but references the same memory addresses for nested objects. A deep copy creates a completely independent copy of an object and all its nested objects. Use copy.copy() for shallow copy and copy.deepcopy() for deep copy. Shallow copies are faster but may lead to unexpected behavior with nested mutable objects."
+  },
+  {
+    "technology": "Python",
+    "question": "How do you handle file operations in Python?",
+    "answer": "File operations in Python are handled using the built-in open() function with context managers (with statement). Common operations include reading (r), writing (w), appending (a), and binary mode (b). The with statement ensures proper file closure even if an error occurs. Example: with open('file.txt', 'r') as f: data = f.read()"
+  },
+  {
+    "technology": "Python",
+    "question": "What are lambda functions in Python?",
+    "answer": "Lambda functions are anonymous functions defined using the lambda keyword. They can take any number of arguments but can only have one expression. They are useful for simple operations and are often used with functions like map(), filter(), and reduce(). Example: lambda x: x * 2"
+  },
+  {
+    "technology": "Python",
+    "question": "How do you implement inheritance in Python?",
+    "answer": "Inheritance in Python is implemented by passing the parent class as an argument to the child class. The child class inherits all attributes and methods from the parent class. You can override methods by redefining them in the child class. Use super() to call parent class methods. Multiple inheritance is also supported."
+  }
+] 
